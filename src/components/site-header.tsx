@@ -18,7 +18,7 @@ export function SiteHeader() {
           >
             {"<codo />"}
           </Link>
-          <nav className="hidden items-center gap-8 text-sm text-white/80 md:flex">
+          <nav className="hidden items-center gap-8 text-sm font-medium text-white/80 md:flex">
             {navigationLinks.map((link) => {
               const isActive = pathname === link.href;
 
