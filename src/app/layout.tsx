@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { M_PLUS_1 } from "next/font/google";
+import { M_PLUS_1, Plus_Jakarta_Sans } from "next/font/google";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -9,6 +9,13 @@ const mPlus1 = M_PLUS_1({
   subsets: ["latin"],
   variable: "--font-logo",
   weight: ["400", "500", "600", "700"],
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-ui-sans",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -27,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nb" className={mPlus1.variable}>
-      <body>
+    <html lang="nb" className={`${mPlus1.variable} ${plusJakartaSans.variable}`}>
+      <body className={plusJakartaSans.className}>
         <SiteHeader />
         {children}
         <SiteFooter />
