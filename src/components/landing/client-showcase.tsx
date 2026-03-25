@@ -5,7 +5,7 @@ export function ClientShowcase() {
   return (
     <section id="om-oss" className="space-y-6">
       <h2 className="text-4xl font-semibold tracking-tight text-white/18">
-        Våre kunder
+        Vår kunde
       </h2>
       <div className="grid w-full gap-5">
         {clients.map((client) => (
