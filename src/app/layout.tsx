@@ -28,13 +28,38 @@ export const metadata: Metadata = {
   },
 };
 
+const themeInitScript = `
+(() => {
+  try {
+    const storageKey = "codo-theme";
+    const storedTheme = localStorage.getItem(storageKey);
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const theme = storedTheme === "light" || storedTheme === "dark"
+      ? storedTheme
+      : systemPrefersDark
+        ? "dark"
+        : "light";
+
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    document.documentElement.style.colorScheme = theme;
+  } catch {}
+})();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nb" className={`${mPlus1.variable} ${plusJakartaSans.variable}`}>
+    <html
+      lang="nb"
+      suppressHydrationWarning
+      className={`${mPlus1.variable} ${plusJakartaSans.variable}`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className={plusJakartaSans.className}>
         <SiteHeader />
         {children}
