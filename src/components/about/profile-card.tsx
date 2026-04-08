@@ -21,15 +21,15 @@ export function ProfileCard({ member }: ProfileCardProps) {
       </div>
       <div className="space-y-4 px-1 py-5">
         <div>
-          <h2 className="text-2xl font-light tracking-[-0.04em] text-white">
+          <h2 className="text-2xl font-light tracking-[-0.04em] text-foreground">
             {member.name}
           </h2>
-          <p className="mt-2 text-sm text-white/58">{member.role}</p>
+          <p className="mt-2 text-sm text-muted-foreground">{member.role}</p>
         </div>
-        <p className="text-sm leading-6 text-white/58">{member.description}</p>
+        <p className="text-sm leading-6 text-muted-foreground">{member.description}</p>
         <a
           href={`mailto:${member.email}`}
-          className="inline-flex items-center gap-2 border-b border-white/20 pb-1 text-sm text-white/78 transition-colors hover:text-white"
+          className="inline-flex items-center gap-2 border-b border-border pb-1 text-sm text-foreground/80 transition-colors hover:text-foreground"
         >
           <Mail className="size-4" />
           {member.email}

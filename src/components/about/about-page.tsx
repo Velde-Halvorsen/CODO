@@ -7,10 +7,10 @@ export function AboutPage() {
     <PageShell>
       <section className="grid gap-10 xl:grid-cols-[0.85fr_1.15fr] xl:items-start">
         <article>
-          <h2 className="max-w-lg text-4xl leading-tight font-light tracking-[-0.04em] text-white sm:text-5xl">
+          <h2 className="max-w-lg text-4xl leading-tight font-light tracking-[-0.04em] text-foreground sm:text-5xl">
             Et kompakt team med tydelige roller og kort vei fra ide til levering.
           </h2>
-          <p className="mt-6 max-w-xl text-base leading-8 text-white/58">
+          <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground">
             Vi bygger digitale flater som skal være enkle å forstå, raske å
             bruke og lette å videreutvikle. Fordelen med et lite team er at
             beslutninger tas raskt, og at samme folk følger prosjektet fra
@@ -18,14 +18,14 @@ export function AboutPage() {
           </p>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             <div>
-              <p className="text-sm text-white/38">Fokus</p>
-              <p className="mt-3 text-lg leading-7 text-white">
+              <p className="text-sm text-muted-foreground/80">Fokus</p>
+              <p className="mt-3 text-lg leading-7 text-foreground">
                 Tydelige nettsider for små bedrifter
               </p>
             </div>
             <div>
-              <p className="text-sm text-white/38">Arbeidsform</p>
-              <p className="mt-3 text-lg leading-7 text-white">
+              <p className="text-sm text-muted-foreground/80">Arbeidsform</p>
+              <p className="mt-3 text-lg leading-7 text-foreground">
                 Design, utvikling og drift i samme løp
               </p>
             </div>
